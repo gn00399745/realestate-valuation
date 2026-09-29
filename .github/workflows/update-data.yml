@@ -1,0 +1,48 @@
+name: 更新實價登錄資料並發布
+
+on:
+  schedule:
+    # 內政部每月 1、11、21 日發布本期資料；隔日台灣時間中午 12:17 執行（UTC 04:17）
+    - cron: "17 4 2,12,22 * *"
+  workflow_dispatch:
+    inputs:
+      seasons:
+        description: "下載近幾季歷史資料"
+        default: "8"
+  push:
+    branches: [main]
+    paths: ["index.html", "sw.js", "manifest.webmanifest", "icons/**", "vercel.json", "scripts/**"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-site
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # 季別歷史資料不會再變動，快取起來避免每次重下載
+      - name: 快取歷史資料
+        uses: actions/cache@v4
+        with:
+          path: lvr_history
+          key: lvr-history-${{ github.run_id }}
+          restore-keys: lvr-history-
+
+      - name: 下載、整理資料並發布到 site 分支
+        env:
+          SEASONS: ${{ github.event.inputs.seasons || '8' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          scripts/publish_site.sh
