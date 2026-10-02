@@ -183,7 +183,7 @@ def pick(d: dict, *keys):
 
 
 COLS = ["addr", "date", "floor", "tfloor", "btype", "age", "area", "unit", "total", "parkPrice",
-        "pkBundled", "landPing", "remark", "extra"]
+        "pkBundled", "landPing", "remark", "extra", "multi"]
 
 
 def _building_rec(r, dt, tot, area_key, park_area_key, park_price_key, extra=""):
@@ -202,7 +202,13 @@ def _building_rec(r, dt, tot, area_key, park_area_key, park_price_key, extra="")
             floor_of(r.get("總樓層數", "")), btype_of(r.get("建物型態")), age, round(area, 2), round(unit),
             round(tot), round(pp), 1 if (has_pk and pp == 0) else 0,
             round(num(pick(r, "土地移轉總面積平方公尺", "土地面積平方公尺")) * SQM, 2),
-            r.get("備註", "")[:40], extra]
+            r.get("備註", "")[:40], extra, _multi(r)]
+
+
+def _multi(r):
+    """交易筆棟數含 2 棟（戶）以上建物者，總價為多戶合計，單價不宜直接比較。"""
+    m = re.search(r"建物(\d+)", r.get("交易筆棟數", "") or r.get("租賃筆棟數", "") or "")
+    return 1 if (m and int(m.group(1)) > 1) else 0
 
 
 def zone_of(r):
@@ -248,7 +254,7 @@ def parse_a(path: Path, sale: dict, land: dict):
                 continue
             z = zone_of(r)
             land[sid] = (r.get("鄉鎮市區", ""), [r.get("土地位置建物門牌", ""), int(dt.strftime("%Y%m%d")), None, None, zone_class(z),
-                         None, round(lp, 2), round(tot / lp), round(tot), 0, 0, round(lp, 2), remark[:40], z])
+                         None, round(lp, 2), round(tot / lp), round(tot), 0, 0, round(lp, 2), remark[:40], z, 0])
             continue
         if "建物" not in tg:
             continue
