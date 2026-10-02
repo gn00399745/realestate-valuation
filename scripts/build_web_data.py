@@ -23,13 +23,14 @@ build_web_data.py
 """
 from __future__ import annotations
 import argparse, csv, io, json, re, shutil, ssl, sys, time, zipfile
-from datetime import date, datetime
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
 
 BASE = "https://plvr.land.moi.gov.tw"
 HERE = Path(__file__).resolve().parent
 SQM = 0.3025
+TW = timezone(timedelta(hours=8))
 COUNTIES = {"A": "臺北市", "B": "臺中市", "C": "基隆市", "D": "臺南市", "E": "高雄市", "F": "新北市",
             "G": "宜蘭縣", "H": "桃園市", "I": "嘉義市", "J": "新竹縣", "K": "苗栗縣", "M": "南投縣",
             "N": "彰化縣", "O": "新竹市", "P": "雲林縣", "Q": "嘉義縣", "T": "屏東縣", "U": "花蓮縣",
@@ -137,9 +138,11 @@ def roc(s: str):
         return None
     s = s.zfill(7)
     try:
-        return date(int(s[:3]) + 1911, int(s[3:5]) or 1, int(s[5:7]) or 1)
+        d = date(int(s[:3]) + 1911, int(s[3:5]) or 1, int(s[5:7]) or 1)
     except ValueError:
         return None
+    # 原始資料偶有民國年誤植而落在未來，這類日期不可信，直接排除
+    return None if (d - date.today()).days > 31 else d
 
 
 def btype_of(s: str) -> str:
@@ -206,11 +209,12 @@ def zone_of(r):
     z = r.get("都市土地使用分區", "").strip()
     if z:
         return z
-    nz = r.get("非都市土地使用編定", "").strip() or r.get("非都市土地使用分區", "").strip()
+    # 非都市土地保留「使用分區/使用地編定」，網頁據以推估國土功能分區
+    nz = "/".join(x for x in (r.get("非都市土地使用分區", "").strip(), r.get("非都市土地使用編定", "").strip()) if x)
     return ("非都市-" + nz) if nz else "未載明"
 
 
-ZONE_CLASS = [("公共設施", "公設"), ("保留地", "公設"), ("道路", "公設"), ("公園", "公設"), ("學校", "公設"),
+ZONE_CLASS = [("保護區", "保護"), ("保育區", "保護"), ("公共設施", "公設"), ("保留地", "公設"), ("道路", "公設"), ("公園", "公設"), ("學校", "公設"),
               ("住宅", "住"), ("住", "住"), ("商業", "商"), ("商", "商"), ("產業", "工"), ("工業", "工"), ("工", "工"),
               ("農業", "農"), ("農", "農"), ("保護", "保護"), ("保存", "保護"), ("風景", "保護")]
 LAND_EXCLUDE = ["公共設施保留地", "道路用地", "政府機關標讓售"]
@@ -333,7 +337,7 @@ def main():
     cutoff = int((date.today().replace(day=1).toordinal() - a.max_months * 30.44))
     cutoff = int(date.fromordinal(cutoff).strftime("%Y%m%d"))
     outdir.mkdir(parents=True, exist_ok=True)
-    index = {"built": datetime.now().strftime("%Y-%m-%d %H:%M"), "sources": [p.name for p in dirs], "counties": {}}
+    index = {"built": datetime.now(TW).strftime("%Y-%m-%d %H:%M"), "sources": [p.name for p in dirs], "counties": {}}
     for code, name in COUNTIES.items():
         sets = {"sale": {}, "presale": {}, "rent": {}, "land": {}}
         for d in dirs:
