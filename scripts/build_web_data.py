@@ -39,7 +39,7 @@ COUNTIES = {"A": "臺北市", "B": "臺中市", "C": "基隆市", "D": "臺南�
 SPECIAL = ["親友", "親屬", "關係人", "親等", "員工", "受僱", "法拍", "拍賣", "抵押權人", "強制執行",
            "急買", "急賣", "急售", "受贈", "贈與", "遺產", "共有物分割", "債權債務", "非市場",
            "含增建", "瑕疵", "凶宅", "毛胚", "特殊"]
-BTYPES = ["住宅大樓", "華廈", "公寓", "透天厝", "套房", "店面", "辦公商業大樓", "廠辦", "工廠", "倉庫"]
+BTYPES = ["住宅大樓", "華廈", "公寓", "透天厝", "套房", "店面", "辦公商業大樓", "廠辦", "工廠", "倉庫", "農舍"]
 CN = {"零": 0, "一": 1, "二": 2, "兩": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9}
 
 
@@ -199,10 +199,18 @@ def _building_rec(r, dt, tot, area_key, park_area_key, park_price_key, extra="")
     cp = roc(r.get("建築完成年月"))
     age = round(max(0.0, (dt - cp).days / 365.25), 1) if cp else None
     return [r.get("土地位置建物門牌", ""), int(dt.strftime("%Y%m%d")), floor_of(pick(r, "移轉層次", "租賃層次")),
-            floor_of(r.get("總樓層數", "")), btype_of(r.get("建物型態")), age, round(area, 2), round(unit),
+            floor_of(r.get("總樓層數", "")), _btype(r), age, round(area, 2), round(unit),
             round(tot), round(pp), 1 if (has_pk and pp == 0) else 0,
             round(num(pick(r, "土地移轉總面積平方公尺", "土地面積平方公尺")) * SQM, 2),
             r.get("備註", "")[:40], extra, _multi(r)]
+
+
+def _btype(r):
+    """農舍在實價登錄多登記為透天厝，主要用途為「農業用」或「農舍」。"""
+    use = r.get("主要用途", "") or ""
+    if "農舍" in use or ("農業用" in use and "透天" in (r.get("建物型態", "") or "")):
+        return "農舍"
+    return btype_of(r.get("建物型態"))
 
 
 def _multi(r):
@@ -223,7 +231,7 @@ def zone_of(r):
 ZONE_CLASS = [("保護區", "保護"), ("保育區", "保護"), ("公共設施", "公設"), ("保留地", "公設"), ("道路", "公設"), ("公園", "公設"), ("學校", "公設"),
               ("住宅", "住"), ("住", "住"), ("商業", "商"), ("商", "商"), ("產業", "工"), ("工業", "工"), ("工", "工"),
               ("農業", "農"), ("農", "農"), ("保護", "保護"), ("保存", "保護"), ("風景", "保護")]
-LAND_EXCLUDE = ["公共設施保留地", "道路用地", "政府機關標讓售"]
+LAND_EXCLUDE = ["道路用地", "政府機關標讓售"]  # 公共設施保留地另標「公保」供特殊估價
 
 
 def zone_class(z: str) -> str:
@@ -236,8 +244,8 @@ def zone_class(z: str) -> str:
     return "其他"
 
 
-def parse_a(path: Path, sale: dict, land: dict):
-    """不動產買賣：房地 → sale；純土地 → land（元/坪土地）。"""
+def parse_a(path: Path, sale: dict, land: dict, park: dict = None):
+    """不動產買賣：房地 → sale；純土地 → land（元/坪土地）；單獨車位 → park（元/位）。"""
     for r in read_rows(path):
         tg = r.get("交易標的", "")
         remark = r.get("備註", "")
@@ -253,8 +261,23 @@ def parse_a(path: Path, sale: dict, land: dict):
             if lp < 1 or any(k in remark for k in LAND_EXCLUDE):
                 continue
             z = zone_of(r)
-            land[sid] = (r.get("鄉鎮市區", ""), [r.get("土地位置建物門牌", ""), int(dt.strftime("%Y%m%d")), None, None, zone_class(z),
+            zc = "公保" if "公共設施保留地" in remark else zone_class(z)
+            land[sid] = (r.get("鄉鎮市區", ""), [r.get("土地位置建物門牌", ""), int(dt.strftime("%Y%m%d")), None, None, zc,
                          None, round(lp, 2), round(tot / lp), round(tot), 0, 0, round(lp, 2), remark[:40], z, 0])
+            continue
+        if tg == "車位" and park is not None:
+            m = re.search(r"車位(\d+)", r.get("交易筆棟數", ""))
+            cnt = int(m.group(1)) if m else 1
+            if cnt < 1 or cnt > 3:
+                continue
+            per = tot / cnt
+            if not (5e4 < per < 8e6):
+                continue
+            pa = num(r.get("車位移轉總面積平方公尺")) * SQM / cnt
+            cat = (r.get("車位類別", "") or "其他").strip()
+            park[sid] = (r.get("鄉鎮市區", ""), [r.get("土地位置建物門牌", ""), int(dt.strftime("%Y%m%d")),
+                         floor_of(r.get("移轉層次", "")), floor_of(r.get("總樓層數", "")), cat, None, round(pa, 2),
+                         round(per), round(tot), 0, 0, 0, remark[:40], cat, 0])
             continue
         if "建物" not in tg:
             continue
@@ -345,11 +368,11 @@ def main():
     outdir.mkdir(parents=True, exist_ok=True)
     index = {"built": datetime.now(TW).strftime("%Y-%m-%d %H:%M"), "sources": [p.name for p in dirs], "counties": {}}
     for code, name in COUNTIES.items():
-        sets = {"sale": {}, "presale": {}, "rent": {}, "land": {}}
+        sets = {"sale": {}, "presale": {}, "rent": {}, "land": {}, "park": {}}
         for d in dirs:
             f = d / f"{code.lower()}_lvr_land_a.csv"
             if f.exists():
-                parse_a(f, sets["sale"], sets["land"])
+                parse_a(f, sets["sale"], sets["land"], sets["park"])
             f = d / f"{code.lower()}_lvr_land_b.csv"
             if f.exists():
                 parse_b(f, sets["presale"])
