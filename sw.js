@@ -2,7 +2,7 @@
    - 網頁本體：網路優先，離線時用快取
    - data/*.json：先回快取、背景更新（資料每旬更新一次）
    - 字型：快取優先 */
-const VERSION = "rev-v4";
+const VERSION = "rev-v5";
 const SHELL = ["./", "index.html", "manifest.webmanifest",
   "icons/icon-192.png", "icons/icon-512.png", "icons/apple-touch-icon.png", "icons/favicon-64.png"];
 
