@@ -185,6 +185,25 @@ ul.src{margin:0;padding-left:18px;display:grid;gap:6px;font-size:.88rem}
 .empty{padding:28px 22px;color:var(--muted)}
 .empty b{color:var(--ink)}
 
+/* deal */
+.dealaxis{position:relative;height:112px;margin:18px 6px 10px}
+.dealaxis .track{position:absolute;left:0;right:0;top:46px;height:4px;background:var(--rule);border-radius:2px}
+.dealaxis .mkt{position:absolute;top:40px;height:16px;background:var(--teal-soft);border:1px solid var(--teal);border-radius:8px}
+.dealaxis .mk{position:absolute;top:0;transform:translateX(-50%);text-align:center;font-size:.74rem;line-height:1.25;white-space:nowrap}
+.dealaxis .mk i{display:block;width:2px;height:22px;margin:4px auto 0;background:currentColor}
+.dealaxis .mk.lo{top:56px}
+.dealaxis .mk.lo i{margin:0 auto 4px}
+.dealaxis .mk.floor{color:var(--muted)} .dealaxis .mk.target{color:var(--warn)} .dealaxis .mk.mid{color:var(--teal)} .dealaxis .mk.sug{color:var(--seal);font-weight:700}
+.dealaxis .mk.sug i{width:3px}
+.dealcards{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:12px}
+.dealcards .card{border:1px solid var(--rule-2);border-radius:var(--r);padding:12px 14px;min-width:0}
+.dealcards h3{font-size:.92rem;margin:0 0 6px}
+.dealcards ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:.86rem}
+.dealsum{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid var(--rule-2);border-radius:var(--r);margin-top:12px}
+.dealsum>div{padding:10px 12px;border-left:1px solid var(--rule-2);min-width:0}
+.dealsum>div:first-child{border-left:0}
+.dealsum .k{font-size:.74rem;color:var(--muted)} .dealsum .v{font-weight:700;font-size:1.02rem;white-space:nowrap}
+.dealsum .v.sug{color:var(--seal)}
 @media (max-width:880px){
   .layout{grid-template-columns:minmax(0,1fr)}
   .form{position:static}
@@ -200,6 +219,10 @@ ul.src{margin:0;padding-left:18px;display:grid;gap:6px;font-size:.88rem}
   .comp .px{grid-row:auto;grid-column:1;text-align:left;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
   .comp .addr{white-space:normal}
   details.pro>summary span{display:none}
+  .dealcards{grid-template-columns:minmax(0,1fr)}
+  .dealsum{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dealsum>div:nth-child(3){border-left:0}
+  .dealsum>div:nth-child(n+3){border-top:1px solid var(--rule-2)}
 }
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -436,6 +459,47 @@ ul.src{margin:0;padding-left:18px;display:grid;gap:6px;font-size:.88rem}
       <h2 id="methodsTitle">各估價方法</h2>
       <p class="lead" id="methodsLead"></p>
       <div class="bars" id="methodBars"></div>
+    </section>
+
+    <section class="panel sec" id="dealSec" data-modes="sale presale">
+      <h2>買賣雙方議價分析</h2>
+      <p class="lead">買方看市場行情（比較法、成本法），賣方看持有成本與報酬（收益法、貸款利息、租金收入）。填入賣方的持有資料，算出保本價、合理報酬價與建議成交價。</p>
+      <details class="more" id="sellerBox" open>
+        <summary>賣方持有資料</summary>
+        <div class="inner">
+          <div class="row2">
+            <label class="f">建案名稱（查預售成交均價）<input id="dl-proj" placeholder="例：遠揚之森"></label>
+            <label class="f">購入年月<input id="dl-date" type="month"></label>
+          </div>
+          <p class="hint" id="dl-projinfo">輸入建案名稱，會從本區預售屋實價登錄找出當初的成交均價。</p>
+          <div class="row3">
+            <label class="f">購入總價<span class="unitwrap"><input id="dl-buy" type="number" inputmode="decimal" placeholder="含車位"><i>萬</i></span></label>
+            <label class="f">購入時費用<span class="unitwrap"><input id="dl-fee" type="number" step="0.5" value="2"><i>%</i></span></label>
+            <label class="f">裝修費<span class="unitwrap"><input id="dl-reno" type="number" value="0"><i>萬</i></span></label>
+          </div>
+          <div class="row3">
+            <label class="f">貸款成數<span class="unitwrap"><input id="dl-ltv" type="number" value="70"><i>%</i></span></label>
+            <label class="f">房貸利率<span class="unitwrap"><input id="dl-rate" type="number" step="0.05" value="2.2"><i>%</i></span></label>
+            <label class="f">貸款年期<span class="unitwrap"><input id="dl-years" type="number" value="30"><i>年</i></span></label>
+          </div>
+          <div class="row3">
+            <label class="f">寬限期<span class="unitwrap"><input id="dl-grace" type="number" value="0"><i>年</i></span></label>
+            <label class="f">每年持有成本<span class="unitwrap"><input id="dl-hold" type="number" step="0.5" value="3"><i>萬</i></span></label>
+            <label class="f">出租月租金<span class="unitwrap"><input id="dl-rent" type="number" value="0"><i>元</i></span></label>
+          </div>
+          <div class="row3">
+            <label class="f">出租期間比例<span class="unitwrap"><input id="dl-rentpct" type="number" value="100"><i>%</i></span></label>
+            <label class="f">合理年報酬率<span class="unitwrap"><input id="dl-ret" type="number" step="0.5" value="3"><i>%</i></span></label>
+            <label class="f">出售費用<span class="unitwrap"><input id="dl-sfee" type="number" step="0.5" value="4.5"><i>%</i></span></label>
+          </div>
+          <div class="rowx">
+            <label class="ck"><input type="checkbox" id="dl-self">自住且設籍滿 6 年（房地合一稅自住優惠）</label>
+            <button type="button" class="btn ghost" id="dl-userent">月租金帶入本區行情</button>
+          </div>
+          <p class="hint">持有成本含地價稅、房屋稅、管理費。出售費用含仲介服務費（賣方上限 4%）與代書費。年報酬率以賣方自有資金計算（已考慮貸款）。</p>
+        </div>
+      </details>
+      <div id="dealOut"></div>
     </section>
   </div>
 </div>
@@ -1189,6 +1253,108 @@ function runSpecial(){
   }
 }
 
+/* ---------- 買賣雙方議價 ---------- */
+let DEAL={};
+function landTax(gain,years,self){
+  if(gain<=0)return 0;
+  if(self)return Math.max(0,gain-4e6)*.10;
+  const r=years<=2?.45:years<=5?.35:years<=10?.20:.15;return gain*r;
+}
+function projLookup(){
+  const q=$("dl-proj").value.trim();if(!q)return null;
+  const p=DATA.presale.filter(d=>(d.extra||"").includes(q));if(!p.length)return {n:0};
+  const ts=p.map(d=>+d.date).sort((a,b)=>a-b);
+  return {n:p.length,unit:med(p.map(d=>d.unit)),park:med(p.filter(d=>d.parkPrice>0).map(d=>d.parkPrice)),date:new Date(ts[Math.floor(ts.length/2)]),first:new Date(ts[0]),last:new Date(ts[ts.length-1])};
+}
+function sellerFlows(S,o){
+  // 逐月現金流：期初自有資金、每月租金－持有成本－房貸，期末售價－出售費用－房地合一稅－貸款餘額
+  const flows=[-o.equity0];let bal=o.loan;const i=o.rate/12;
+  for(let k=1;k<=o.m;k++){
+    let pay=0;
+    if(bal>0){if(k<=o.grace)pay=bal*i;else{const left=Math.max(1,o.N-(k-o.grace-1));pay=i>0?bal*i/(1-Math.pow(1+i,-left)):bal/left;const prin=pay-bal*i;bal=Math.max(0,bal-prin)}}
+    flows.push(o.rentM-o.holdM-pay);
+  }
+  const fee=S*o.sfee,gain=S-o.basis-fee,tax=landTax(gain,o.m/12,o.self);
+  flows[flows.length-1]+=S-fee-tax-bal;
+  return {flows,tax,fee,bal,gain};
+}
+const npv=(fl,r)=>fl.reduce((t,c,k)=>t+c/Math.pow(1+r,k),0);
+function irrM(fl){let lo=-.05,hi=.05;if(npv(fl,lo)*npv(fl,hi)>0)return NaN;for(let k=0;k<80;k++){const m=(lo+hi)/2;if(npv(fl,lo)*npv(fl,m)<=0)hi=m;else lo=m}return (lo+hi)/2}
+function solvePrice(o,rM){let lo=0,hi=Math.max(o.buy*4,1e8);const f=S=>npv(sellerFlows(S,o).flows,rM);if(f(hi)<0)return NaN;for(let k=0;k<70;k++){const m=(lo+hi)/2;if(f(m)<0)lo=m;else hi=m}return (lo+hi)/2}
+function runDeal(){
+  DEAL={};if(!(mode==="sale"||mode==="presale")||!isFinite(FIN.fin))return;
+  const s=subject();const fin=FIN.fin,r=FIN.r;
+  const pj=projLookup();DEAL.pj=pj;
+  const buy=v("dl-buy")*1e4;
+  // 買方：月付金與租金
+  const rate=v("dl-rate")/100,rentMkt=isFinite(INC.total)&&INC.my?INC.my.rent*s.area:(v("in-rent")*s.area||NaN);
+  const pmt=(P,yrs)=>{const i=rate/12,n=yrs*12;return i>0?P*i/(1-Math.pow(1+i,-n)):P/n};
+  DEAL.buyer={pay:pmt(fin*.8,30),down:fin*.2,rent:rentMkt,yield:rentMkt*12/fin,cost:COST.total,comp:COMP.total};
+  if(!(buy>0)){DEAL.ready=false;return}
+  const dd=$("dl-date").value?new Date($("dl-date").value+"-01"):null;
+  const m=dd?Math.max(1,Math.round(monthsBetween(dd,s.date))):60;
+  const o={buy,m,loan:buy*v("dl-ltv")/100,rate,grace:Math.round(v("dl-grace")*12),N:Math.round(v("dl-years")*12),
+    equity0:buy*(1-v("dl-ltv")/100)+buy*v("dl-fee")/100+v("dl-reno")*1e4,
+    rentM:v("dl-rent")*v("dl-rentpct")/100,holdM:v("dl-hold")*1e4/12,sfee:v("dl-sfee")/100,self:$("dl-self").checked,
+    basis:buy*(1+v("dl-fee")/100)+v("dl-reno")*1e4};
+  o.N=Math.max(1,o.N-o.grace);
+  const atMkt=sellerFlows(fin,o);const irr=irrM(atMkt.flows);
+  const floor=solvePrice(o,0),target=solvePrice(o,Math.pow(1+v("dl-ret")/100,1/12)-1);
+  // 累計
+  let interest=0,paid=0;{let bal=o.loan;const i=rate/12;for(let k=1;k<=m;k++){let pay=0;if(bal>0){if(k<=o.grace)pay=bal*i;else{const left=Math.max(1,o.N-(k-o.grace-1));pay=i>0?bal*i/(1-Math.pow(1+i,-left)):bal/left;bal=Math.max(0,bal-(pay-bal*i))}}interest+=pay;paid+=pay}interest=paid-(o.loan-bal)}
+  const hi=fin*(1+r),lo=fin*(1-r);
+  let sug,zone;
+  if(target<=fin){sug=fin;zone="profit"}
+  else if(floor<=fin){sug=Math.min(target,fin*(1+r/2));zone="between"}
+  else{sug=Math.min(floor,hi);zone="loss"}
+  DEAL={...DEAL,ready:true,o,m,irr:Math.pow(1+irr,12)-1,floor,target,sug,zone,lo,hi,fin,atMkt,interest,hold:o.holdM*m,rentSum:o.rentM*m,
+    gainPct:fin/buy-1,annual:Math.pow(fin/buy,12/m)-1};
+}
+function bal(o,m){let b=o.loan;const i=o.rate/12;for(let k=1;k<=m;k++){if(b<=0)break;if(k<=o.grace)continue;const left=Math.max(1,o.N-(k-o.grace-1));const pay=i>0?b*i/(1-Math.pow(1+i,-left)):b/left;b=Math.max(0,b-(pay-b*i))}return b}
+function renderDeal(){
+  const el=$("dealOut");if(!el||$("dealSec").hidden)return;const D=DEAL;const s=subject();
+  const pj=D.pj;
+  $("dl-projinfo").textContent=!pj?"輸入建案名稱，會從本區預售屋實價登錄找出當初的成交均價。":pj.n===0?"本區近期預售屋資料找不到此建案（資料約涵蓋近 30 個月），請直接填入購入總價。":
+    `找到 ${pj.n} 筆預售成交（${ym(pj.first)}～${ym(pj.last)}），單價中位數 ${(pj.unit/1e4).toFixed(1)} 萬/坪${isFinite(pj.park)?`、車位 ${Math.round(pj.park/1e4)} 萬`:""}；以標的 ${s.area} 坪推算約 ${wanN(pj.unit*s.area+(s.park?(isFinite(pj.park)?pj.park:0):0))} 萬。`;
+  if(!isFinite(FIN.fin)){el.innerHTML="";return}
+  const B=D.buyer||{};
+  const buyerPts=[`比較法：${COMP.ok?COMP.ok.length:0} 件鄰近成交調整後，市場價格約 ${wan(COMP.total)}，合理區間 ${wanN(FIN.fin*(1-FIN.r))}～${wanN(FIN.fin*(1+FIN.r))} 萬。`];
+  if(isFinite(B.cost))buyerPts.push(`成本法：土地加建物重建成本扣除折舊約 ${wan(B.cost)}，可作為價格下限參考。`);
+  if(isFinite(B.rent))buyerPts.push(`租買比較：同等房屋月租約 ${Math.round(B.rent).toLocaleString()} 元；以市價、貸款八成、利率 ${v("dl-rate")}%、30 年計，月付約 ${Math.round(B.pay).toLocaleString()} 元，頭期款 ${wan(B.down)}。租金收益率 ${p0(B.yield,2)}。`);
+  if(pj&&pj.n)buyerPts.push(`此建案預售成交均價 ${(pj.unit/1e4).toFixed(1)} 萬/坪，現估 ${((FIN.fin-s.park)/s.area/1e4).toFixed(1)} 萬/坪，相差 ${pct(((FIN.fin-s.park)/s.area)/pj.unit-1)}。`);
+  if(!D.ready){el.innerHTML=`<div class="dealcards"><div class="card"><h3>給買方的說明</h3><ul>${buyerPts.map(t=>`<li>${t}</li>`).join("")}</ul></div><div class="card"><h3>給賣方的說明</h3><p class="note">填入購入總價（可用建案名稱查詢預售均價推算）與購入年月，即可算出賣方的保本價、合理報酬價與建議成交價。</p></div></div>`;return}
+  const ret=v("dl-ret")/100;
+  const sellerPts=[
+    `持有 ${(D.m/12).toFixed(1)} 年：購入 ${wan(D.o.buy)}，期間房貸利息約 ${wan(D.interest)}、持有成本 ${wan(D.hold)}${D.rentSum?`、租金收入 ${wan(D.rentSum)}`:""}。`,
+    `保本價（扣除仲介費與房地合一稅後不虧損）約 ${wan(D.floor)}；達到年報酬 ${p0(ret,1)} 需售 ${wan(D.target)}。`,
+    `以市價 ${wan(D.fin)} 出售，帳面增值 ${pct(D.gainPct)}（年化 ${pct(D.annual)}），扣除費用、稅負與利息後自有資金年化報酬約 ${pct(D.irr)}；房地合一稅約 ${wan(D.atMkt.tax)}${$("dl-self").checked?"（自住優惠）":`（持有 ${(D.m/12).toFixed(1)} 年稅率 ${D.m/12<=2?"45":D.m/12<=5?"35":D.m/12<=10?"20":"15"}%）`}。`];
+  const zoneTxt={profit:`市價已高於賣方合理報酬價，賣方以市價成交仍有 ${pct(D.irr)} 年化報酬，建議以市價 ${wan(D.sug)} 成交。`,
+    between:`市價介於保本價與合理報酬價之間：賣方不會虧損，但報酬低於 ${p0(ret,1)}。建議成交價 ${wan(D.sug)}，落在市場區間內偏上緣，雙方各讓一步。`,
+    loss:`市價低於賣方保本價，以市價出售會虧損約 ${wan(D.floor-D.fin)}。建議成交價 ${wan(D.sug)}${D.sug>=D.hi?"（已達市場區間上緣，買方接受度低）":""}；賣方也可考慮續租等待。`}[D.zone];
+  // 價格軸
+  const pts=[D.lo,D.hi,D.floor,D.target,D.sug].filter(isFinite);const mn=Math.min(...pts)*0.97,mx=Math.max(...pts)*1.03;const X=x=>((x-mn)/(mx-mn)*100).toFixed(2)+"%";
+  const mk=(x,cls,label,low)=>isFinite(x)?`<div class="mk ${cls}${low?" lo":""}" style="left:${X(x)}">${low?`<i></i>`:""}${label}<br>${wanN(x)} 萬${low?"":`<i></i>`}</div>`:"";
+  el.innerHTML=`<div class="dealsum">
+      <div><div class="k">賣方保本價</div><div class="v">${wan(D.floor)}</div></div>
+      <div><div class="k">合理報酬價（${p0(ret,1)}）</div><div class="v">${wan(D.target)}</div></div>
+      <div><div class="k">市場估價</div><div class="v">${wan(D.fin)}</div></div>
+      <div><div class="k">建議成交價</div><div class="v sug">${wan(D.sug)}</div></div>
+    </div>
+    <div class="dealaxis" role="img" aria-label="價格軸：保本價、合理報酬價、市場區間與建議成交價">
+      <div class="track"></div><div class="mkt" style="left:${X(D.lo)};width:calc(${X(D.hi)} - ${X(D.lo)})"></div>
+      ${mk(D.floor,"floor","保本",false)}${mk(D.target,"target","合理報酬",true)}${mk(D.fin,"mid","市價",true)}${mk(D.sug,"sug","建議",false)}
+    </div>
+    <div class="msg ${D.zone==="loss"?"warn":"ok"}">${zoneTxt}</div>
+    <div class="dealcards">
+      <div class="card"><h3>給買方的說明</h3><ul>${buyerPts.map(t=>`<li>${t}</li>`).join("")}</ul></div>
+      <div class="card"><h3>給賣方的說明</h3><ul>${sellerPts.map(t=>`<li>${t}</li>`).join("")}</ul></div>
+    </div>
+    <div class="rowx" style="margin-top:10px"><button type="button" class="btn" id="dl-copy">複製議價說帖</button><span class="note" id="dl-copyinfo"></span></div>`;
+  $("dl-copy").onclick=()=>{const t=[`【議價分析】${s.district} ${$("sj-address").value||""}`,`建議成交價：${wan(D.sug)}（市場估價 ${wan(D.fin)}，區間 ${wanN(D.lo)}～${wanN(D.hi)} 萬）`,zoneTxt,"","給買方：",...buyerPts.map(x=>"・"+x),"","給賣方：",...sellerPts.map(x=>"・"+x),"","※ 試算參考，稅額以國稅局核定為準。"].join("\n");
+    const fb=()=>{$("dl-copyinfo").textContent="瀏覽器不允許自動複製，請改用專業明細的摘要。"};if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(()=>{$("dl-copyinfo").textContent="已複製"},fb);else fb()};
+}
+$("dl-userent").addEventListener("click",()=>{const s=subject();const my=marketYield();const r=my?my.rent:v("in-rent");$("dl-rent").value=Math.round(r*s.area/100)*100;recalc()});
+
 /* ---------- 結論 ---------- */
 let W={};for(const k in MODES)W[k]={...MODES[k].W};
 function methodVal(k){return k==="comp"?COMP.total:k==="income"?INC.total:k==="cost"?COST.total:k==="accum"?ACC.total:k==="dev"?DEV.total:k==="fhcost"?FH.total:k==="pubann"?PUB.total:k==="calc"?CALC.fin:NaN}
@@ -1397,8 +1563,8 @@ $("sj-haspk").addEventListener("change",()=>{suggestPark();recalc()});
 $("sj-haspkr").addEventListener("change",()=>{if($("sj-haspkr").value==="1"&&!v("sj-prent")){const s=subject();const m=med(DATA.rent.filter(d=>d.district===s.district&&d.parkPrice>0).map(d=>d.parkPrice));$("sj-prent").value=isFinite(m)?Math.round(m/100)*100:2500}recalc()});
 
 /* ---------- 計算 ---------- */
-function recalc(){runComp();runIncome();runAccum();runDev();runCost();runSpecial();runFinal();renderResult();renderComp();renderReport();save()}
-const INPUTS=[...document.querySelectorAll("#form input:not([type=radio]), #form select, #proBox input:not([type=file]):not([data-ed]):not([data-sel]):not([data-w]), #proBox select:not([data-ed]), #sj-tiermap")].filter(el=>el.id&&el.id!=="sj-county"&&el.id!=="sj-district");
+function recalc(){runComp();runIncome();runAccum();runDev();runCost();runSpecial();runFinal();runDeal();renderResult();renderDeal();renderComp();renderReport();save()}
+const INPUTS=[...document.querySelectorAll("#form input:not([type=radio]), #form select, #proBox input:not([type=file]):not([data-ed]):not([data-sel]):not([data-w]), #proBox select:not([data-ed]), #sj-tiermap, #dealSec input")].filter(el=>el.id&&el.id!=="sj-county"&&el.id!=="sj-district");
 const REPICK=new Set(["farm-area","farm-class","fh-land","fh-bldg","fh-age","pk-cat","pk-floor","pub-area","sj-btype","sj-area","sj-age","sj-floor","sj-tfloor","sj-address","sj-proj","sj-site","sj-zone","sj-nlz","sj-date","cf-months","cf-age","cf-arear","cf-topn","cf-wl","cf-samedist","cf-sametype","cf-1f","cf-nopark","cf-rentx","cf-proj","cf-samenlz"]);
 let tmr;
 INPUTS.forEach(el=>el.addEventListener(el.tagName==="SELECT"||el.type==="checkbox"?"change":"input",()=>{clearTimeout(tmr);tmr=setTimeout(()=>REPICK.has(el.id)?autoPick():recalc(),200)}));
@@ -1441,6 +1607,7 @@ if("serviceWorker" in navigator&&(location.protocol==="https:"||location.hostnam
 
 window.__rev={get data(){return DATA},get fin(){return FIN},get comp(){return COMP},autoPick};
 (async function init(){
+  {const d=new Date();d.setFullYear(d.getFullYear()-5);$("dl-date").value=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}`}
   const o=restore();
   applyMode();suggestPark();
   if(await loadIndex()){
