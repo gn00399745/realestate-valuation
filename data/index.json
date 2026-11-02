@@ -1,0 +1,2822 @@
+{
+ "built": "2026-11-02 20:31",
+ "sources": [
+  "lvr_landcsv",
+  "113S4",
+  "114S1",
+  "114S2",
+  "114S3",
+  "114S4",
+  "115S1",
+  "115S2",
+  "115S3",
+  "cur_20261102"
+ ],
+ "counties": {
+  "A": {
+   "name": "臺北市",
+   "sale": 24106,
+   "presale": 8617,
+   "rent": 42462,
+   "land": 4289,
+   "park": 1662,
+   "from": 20240501,
+   "to": 20261007,
+   "districts": {
+    "中山區": {
+     "sale": 3514,
+     "presale": 956,
+     "rent": 7335,
+     "land": 189,
+     "park": 233
+    },
+    "中正區": {
+     "sale": 1476,
+     "presale": 360,
+     "rent": 3055,
+     "land": 116,
+     "park": 90
+    },
+    "信義區": {
+     "sale": 1832,
+     "presale": 322,
+     "rent": 3471,
+     "land": 361,
+     "park": 186
+    },
+    "內湖區": {
+     "sale": 2635,
+     "presale": 264,
+     "rent": 3359,
+     "land": 777,
+     "park": 221
+    },
+    "北投區": {
+     "sale": 2202,
+     "presale": 1509,
+     "rent": 2739,
+     "land": 489,
+     "park": 89
+    },
+    "南港區": {
+     "sale": 992,
+     "presale": 832,
+     "rent": 1304,
+     "land": 191,
+     "park": 121
+    },
+    "士林區": {
+     "sale": 1753,
+     "presale": 604,
+     "rent": 3517,
+     "land": 710,
+     "park": 109
+    },
+    "大同區": {
+     "sale": 1180,
+     "presale": 683,
+     "rent": 3211,
+     "land": 165,
+     "park": 91
+    },
+    "大安區": {
+     "sale": 2897,
+     "presale": 669,
+     "rent": 4080,
+     "land": 428,
+     "park": 200
+    },
+    "文山區": {
+     "sale": 2066,
+     "presale": 1675,
+     "rent": 3058,
+     "land": 409,
+     "park": 146
+    },
+    "松山區": {
+     "sale": 1872,
+     "presale": 301,
+     "rent": 3110,
+     "land": 252,
+     "park": 118
+    },
+    "萬華區": {
+     "sale": 1687,
+     "presale": 442,
+     "rent": 4223,
+     "land": 202,
+     "park": 58
+    }
+   }
+  },
+  "B": {
+   "name": "臺中市",
+   "sale": 37417,
+   "presale": 14589,
+   "rent": 48213,
+   "land": 9385,
+   "park": 601,
+   "from": 20240501,
+   "to": 20261012,
+   "districts": {
+    "中區": {
+     "sale": 492,
+     "presale": 118,
+     "rent": 1255,
+     "land": 27,
+     "park": 5
+    },
+    "北區": {
+     "sale": 2859,
+     "presale": 249,
+     "rent": 5116,
+     "land": 143,
+     "park": 49
+    },
+    "北屯區": {
+     "sale": 5643,
+     "presale": 3264,
+     "rent": 6678,
+     "land": 657,
+     "park": 81
+    },
+    "南區": {
+     "sale": 2118,
+     "presale": 955,
+     "rent": 2661,
+     "land": 242,
+     "park": 37
+    },
+    "南屯區": {
+     "sale": 2816,
+     "presale": 1660,
+     "rent": 3733,
+     "land": 590,
+     "park": 114
+    },
+    "后里區": {
+     "sale": 437,
+     "presale": 303,
+     "rent": 173,
+     "land": 364,
+     "park": 1
+    },
+    "和平區": {
+     "sale": 2,
+     "presale": 0,
+     "rent": 0,
+     "land": 65,
+     "park": 0
+    },
+    "外埔區": {
+     "sale": 253,
+     "presale": 116,
+     "rent": 35,
+     "land": 157,
+     "park": 2
+    },
+    "大安區": {
+     "sale": 58,
+     "presale": 25,
+     "rent": 4,
+     "land": 161,
+     "park": 0
+    },
+    "大甲區": {
+     "sale": 468,
+     "presale": 155,
+     "rent": 131,
+     "land": 347,
+     "park": 0
+    },
+    "大肚區": {
+     "sale": 340,
+     "presale": 145,
+     "rent": 236,
+     "land": 217,
+     "park": 0
+    },
+    "大里區": {
+     "sale": 1601,
+     "presale": 294,
+     "rent": 1897,
+     "land": 434,
+     "park": 19
+    },
+    "大雅區": {
+     "sale": 596,
+     "presale": 121,
+     "rent": 545,
+     "land": 368,
+     "park": 7
+    },
+    "太平區": {
+     "sale": 3241,
+     "presale": 765,
+     "rent": 2031,
+     "land": 367,
+     "park": 36
+    },
+    "新社區": {
+     "sale": 96,
+     "presale": 8,
+     "rent": 24,
+     "land": 264,
+     "park": 0
+    },
+    "東勢區": {
+     "sale": 255,
+     "presale": 57,
+     "rent": 65,
+     "land": 504,
+     "park": 5
+    },
+    "東區": {
+     "sale": 952,
+     "presale": 138,
+     "rent": 1309,
+     "land": 192,
+     "park": 19
+    },
+    "梧棲區": {
+     "sale": 1744,
+     "presale": 802,
+     "rent": 1731,
+     "land": 249,
+     "park": 1
+    },
+    "沙鹿區": {
+     "sale": 1303,
+     "presale": 777,
+     "rent": 706,
+     "land": 601,
+     "park": 3
+    },
+    "清水區": {
+     "sale": 735,
+     "presale": 552,
+     "rent": 1229,
+     "land": 447,
+     "park": 1
+    },
+    "潭子區": {
+     "sale": 1231,
+     "presale": 223,
+     "rent": 699,
+     "land": 242,
+     "park": 24
+    },
+    "烏日區": {
+     "sale": 914,
+     "presale": 801,
+     "rent": 1139,
+     "land": 317,
+     "park": 9
+    },
+    "石岡區": {
+     "sale": 60,
+     "presale": 30,
+     "rent": 16,
+     "land": 179,
+     "park": 0
+    },
+    "神岡區": {
+     "sale": 330,
+     "presale": 93,
+     "rent": 189,
+     "land": 326,
+     "park": 2
+    },
+    "西區": {
+     "sale": 1932,
+     "presale": 291,
+     "rent": 3224,
+     "land": 149,
+     "park": 42
+    },
+    "西屯區": {
+     "sale": 4254,
+     "presale": 1933,
+     "rent": 7219,
+     "land": 606,
+     "park": 129
+    },
+    "豐原區": {
+     "sale": 1230,
+     "presale": 384,
+     "rent": 1205,
+     "land": 353,
+     "park": 9
+    },
+    "霧峰區": {
+     "sale": 446,
+     "presale": 58,
+     "rent": 3584,
+     "land": 328,
+     "park": 1
+    },
+    "龍井區": {
+     "sale": 1011,
+     "presale": 272,
+     "rent": 1379,
+     "land": 489,
+     "park": 5
+    }
+   }
+  },
+  "C": {
+   "name": "基隆市",
+   "sale": 5516,
+   "presale": 632,
+   "rent": 6317,
+   "land": 334,
+   "park": 134,
+   "from": 20240502,
+   "to": 20261007,
+   "districts": {
+    "七堵區": {
+     "sale": 582,
+     "presale": 99,
+     "rent": 525,
+     "land": 120,
+     "park": 11
+    },
+    "中山區": {
+     "sale": 464,
+     "presale": 8,
+     "rent": 645,
+     "land": 38,
+     "park": 4
+    },
+    "中正區": {
+     "sale": 1206,
+     "presale": 40,
+     "rent": 1732,
+     "land": 39,
+     "park": 51
+    },
+    "仁愛區": {
+     "sale": 440,
+     "presale": 4,
+     "rent": 506,
+     "land": 13,
+     "park": 11
+    },
+    "信義區": {
+     "sale": 845,
+     "presale": 31,
+     "rent": 819,
+     "land": 41,
+     "park": 15
+    },
+    "安樂區": {
+     "sale": 1426,
+     "presale": 302,
+     "rent": 1404,
+     "land": 51,
+     "park": 37
+    },
+    "暖暖區": {
+     "sale": 553,
+     "presale": 148,
+     "rent": 686,
+     "land": 32,
+     "park": 5
+    }
+   }
+  },
+  "D": {
+   "name": "臺南市",
+   "sale": 21904,
+   "presale": 6752,
+   "rent": 27963,
+   "land": 13264,
+   "park": 201,
+   "from": 20240501,
+   "to": 20261011,
+   "districts": {
+    "七股區": {
+     "sale": 85,
+     "presale": 0,
+     "rent": 50,
+     "land": 219,
+     "park": 0
+    },
+    "下營區": {
+     "sale": 57,
+     "presale": 48,
+     "rent": 12,
+     "land": 194,
+     "park": 0
+    },
+    "中西區": {
+     "sale": 1056,
+     "presale": 149,
+     "rent": 2593,
+     "land": 154,
+     "park": 14
+    },
+    "仁德區": {
+     "sale": 1202,
+     "presale": 281,
+     "rent": 1258,
+     "land": 898,
+     "park": 8
+    },
+    "佳里區": {
+     "sale": 669,
+     "presale": 117,
+     "rent": 221,
+     "land": 387,
+     "park": 3
+    },
+    "六甲區": {
+     "sale": 124,
+     "presale": 64,
+     "rent": 36,
+     "land": 235,
+     "park": 0
+    },
+    "北區": {
+     "sale": 1448,
+     "presale": 212,
+     "rent": 2582,
+     "land": 282,
+     "park": 18
+    },
+    "北門區": {
+     "sale": 3,
+     "presale": 0,
+     "rent": 3,
+     "land": 79,
+     "park": 0
+    },
+    "南化區": {
+     "sale": 13,
+     "presale": 0,
+     "rent": 0,
+     "land": 73,
+     "park": 0
+    },
+    "南區": {
+     "sale": 1259,
+     "presale": 69,
+     "rent": 1521,
+     "land": 425,
+     "park": 11
+    },
+    "善化區": {
+     "sale": 919,
+     "presale": 484,
+     "rent": 887,
+     "land": 687,
+     "park": 4
+    },
+    "大內區": {
+     "sale": 18,
+     "presale": 1,
+     "rent": 9,
+     "land": 146,
+     "park": 0
+    },
+    "學甲區": {
+     "sale": 258,
+     "presale": 44,
+     "rent": 160,
+     "land": 350,
+     "park": 1
+    },
+    "安南區": {
+     "sale": 2068,
+     "presale": 1200,
+     "rent": 2002,
+     "land": 1428,
+     "park": 17
+    },
+    "安定區": {
+     "sale": 364,
+     "presale": 141,
+     "rent": 313,
+     "land": 593,
+     "park": 5
+    },
+    "安平區": {
+     "sale": 1281,
+     "presale": 55,
+     "rent": 2162,
+     "land": 95,
+     "park": 23
+    },
+    "官田區": {
+     "sale": 155,
+     "presale": 26,
+     "rent": 30,
+     "land": 330,
+     "park": 0
+    },
+    "將軍區": {
+     "sale": 54,
+     "presale": 1,
+     "rent": 4,
+     "land": 236,
+     "park": 0
+    },
+    "山上區": {
+     "sale": 65,
+     "presale": 36,
+     "rent": 2,
+     "land": 134,
+     "park": 0
+    },
+    "左鎮區": {
+     "sale": 2,
+     "presale": 0,
+     "rent": 0,
+     "land": 75,
+     "park": 0
+    },
+    "後壁區": {
+     "sale": 82,
+     "presale": 29,
+     "rent": 12,
+     "land": 349,
+     "park": 0
+    },
+    "新化區": {
+     "sale": 229,
+     "presale": 175,
+     "rent": 175,
+     "land": 325,
+     "park": 6
+    },
+    "新市區": {
+     "sale": 653,
+     "presale": 162,
+     "rent": 1121,
+     "land": 355,
+     "park": 2
+    },
+    "新營區": {
+     "sale": 904,
+     "presale": 551,
+     "rent": 409,
+     "land": 476,
+     "park": 21
+    },
+    "東區": {
+     "sale": 2336,
+     "presale": 1050,
+     "rent": 4720,
+     "land": 217,
+     "park": 20
+    },
+    "東山區": {
+     "sale": 76,
+     "presale": 0,
+     "rent": 9,
+     "land": 366,
+     "park": 0
+    },
+    "柳營區": {
+     "sale": 127,
+     "presale": 7,
+     "rent": 38,
+     "land": 401,
+     "park": 0
+    },
+    "楠西區": {
+     "sale": 61,
+     "presale": 15,
+     "rent": 6,
+     "land": 98,
+     "park": 0
+    },
+    "歸仁區": {
+     "sale": 1657,
+     "presale": 623,
+     "rent": 953,
+     "land": 613,
+     "park": 7
+    },
+    "永康區": {
+     "sale": 3123,
+     "presale": 891,
+     "rent": 6173,
+     "land": 713,
+     "park": 23
+    },
+    "玉井區": {
+     "sale": 96,
+     "presale": 15,
+     "rent": 24,
+     "land": 153,
+     "park": 0
+    },
+    "白河區": {
+     "sale": 186,
+     "presale": 15,
+     "rent": 68,
+     "land": 711,
+     "park": 0
+    },
+    "西港區": {
+     "sale": 306,
+     "presale": 53,
+     "rent": 64,
+     "land": 274,
+     "park": 1
+    },
+    "關廟區": {
+     "sale": 281,
+     "presale": 141,
+     "rent": 100,
+     "land": 387,
+     "park": 0
+    },
+    "鹽水區": {
+     "sale": 232,
+     "presale": 16,
+     "rent": 108,
+     "land": 346,
+     "park": 0
+    },
+    "麻豆區": {
+     "sale": 455,
+     "presale": 81,
+     "rent": 138,
+     "land": 408,
+     "park": 17
+    },
+    "龍崎區": {
+     "sale": 0,
+     "presale": 0,
+     "rent": 0,
+     "land": 52,
+     "park": 0
+    }
+   }
+  },
+  "E": {
+   "name": "高雄市",
+   "sale": 38145,
+   "presale": 7315,
+   "rent": 46433,
+   "land": 10160,
+   "park": 470,
+   "from": 20240501,
+   "to": 20261013,
+   "districts": {
+    "三民區": {
+     "sale": 5564,
+     "presale": 1112,
+     "rent": 7561,
+     "land": 292,
+     "park": 62
+    },
+    "仁武區": {
+     "sale": 1833,
+     "presale": 366,
+     "rent": 936,
+     "land": 614,
+     "park": 15
+    },
+    "內門區": {
+     "sale": 12,
+     "presale": 0,
+     "rent": 0,
+     "land": 118,
+     "park": 0
+    },
+    "六龜區": {
+     "sale": 33,
+     "presale": 0,
+     "rent": 2,
+     "land": 116,
+     "park": 0
+    },
+    "前金區": {
+     "sale": 753,
+     "presale": 178,
+     "rent": 1430,
+     "land": 71,
+     "park": 9
+    },
+    "前鎮區": {
+     "sale": 2419,
+     "presale": 496,
+     "rent": 3439,
+     "land": 204,
+     "park": 58
+    },
+    "大寮區": {
+     "sale": 1245,
+     "presale": 186,
+     "rent": 861,
+     "land": 1667,
+     "park": 7
+    },
+    "大樹區": {
+     "sale": 433,
+     "presale": 50,
+     "rent": 115,
+     "land": 238,
+     "park": 5
+    },
+    "大社區": {
+     "sale": 424,
+     "presale": 194,
+     "rent": 665,
+     "land": 363,
+     "park": 1
+    },
+    "小港區": {
+     "sale": 1955,
+     "presale": 289,
+     "rent": 1994,
+     "land": 675,
+     "park": 14
+    },
+    "岡山區": {
+     "sale": 851,
+     "presale": 147,
+     "rent": 806,
+     "land": 454,
+     "park": 3
+    },
+    "左營區": {
+     "sale": 3226,
+     "presale": 480,
+     "rent": 4285,
+     "land": 187,
+     "park": 56
+    },
+    "彌陀區": {
+     "sale": 52,
+     "presale": 9,
+     "rent": 14,
+     "land": 112,
+     "park": 0
+    },
+    "新興區": {
+     "sale": 1158,
+     "presale": 671,
+     "rent": 2461,
+     "land": 67,
+     "park": 10
+    },
+    "旗山區": {
+     "sale": 207,
+     "presale": 29,
+     "rent": 68,
+     "land": 355,
+     "park": 0
+    },
+    "旗津區": {
+     "sale": 45,
+     "presale": 0,
+     "rent": 31,
+     "land": 21,
+     "park": 0
+    },
+    "杉林區": {
+     "sale": 11,
+     "presale": 0,
+     "rent": 1,
+     "land": 89,
+     "park": 0
+    },
+    "林園區": {
+     "sale": 855,
+     "presale": 191,
+     "rent": 329,
+     "land": 417,
+     "park": 0
+    },
+    "桃源區": {
+     "sale": 0,
+     "presale": 0,
+     "rent": 0,
+     "land": 24,
+     "park": 0
+    },
+    "梓官區": {
+     "sale": 329,
+     "presale": 39,
+     "rent": 96,
+     "land": 236,
+     "park": 0
+    },
+    "楠梓區": {
+     "sale": 4261,
+     "presale": 851,
+     "rent": 5017,
+     "land": 222,
+     "park": 22
+    },
+    "橋頭區": {
+     "sale": 907,
+     "presale": 264,
+     "rent": 965,
+     "land": 486,
+     "park": 2
+    },
+    "永安區": {
+     "sale": 29,
+     "presale": 0,
+     "rent": 14,
+     "land": 73,
+     "park": 0
+    },
+    "湖內區": {
+     "sale": 275,
+     "presale": 82,
+     "rent": 819,
+     "land": 191,
+     "park": 0
+    },
+    "燕巢區": {
+     "sale": 253,
+     "presale": 42,
+     "rent": 651,
+     "land": 454,
+     "park": 0
+    },
+    "田寮區": {
+     "sale": 2,
+     "presale": 0,
+     "rent": 1,
+     "land": 92,
+     "park": 0
+    },
+    "甲仙區": {
+     "sale": 27,
+     "presale": 0,
+     "rent": 15,
+     "land": 40,
+     "park": 1
+    },
+    "美濃區": {
+     "sale": 144,
+     "presale": 34,
+     "rent": 19,
+     "land": 392,
+     "park": 0
+    },
+    "苓雅區": {
+     "sale": 2704,
+     "presale": 464,
+     "rent": 4871,
+     "land": 179,
+     "park": 51
+    },
+    "茂林區": {
+     "sale": 1,
+     "presale": 0,
+     "rent": 0,
+     "land": 15,
+     "park": 0
+    },
+    "茄萣區": {
+     "sale": 132,
+     "presale": 1,
+     "rent": 56,
+     "land": 74,
+     "park": 0
+    },
+    "路竹區": {
+     "sale": 261,
+     "presale": 116,
+     "rent": 127,
+     "land": 418,
+     "park": 0
+    },
+    "那瑪夏區": {
+     "sale": 1,
+     "presale": 0,
+     "rent": 0,
+     "land": 32,
+     "park": 0
+    },
+    "阿蓮區": {
+     "sale": 184,
+     "presale": 22,
+     "rent": 36,
+     "land": 166,
+     "park": 0
+    },
+    "鳥松區": {
+     "sale": 543,
+     "presale": 62,
+     "rent": 464,
+     "land": 455,
+     "park": 15
+    },
+    "鳳山區": {
+     "sale": 4476,
+     "presale": 417,
+     "rent": 4393,
+     "land": 329,
+     "park": 23
+    },
+    "鹽埕區": {
+     "sale": 414,
+     "presale": 84,
+     "rent": 795,
+     "land": 32,
+     "park": 2
+    },
+    "鼓山區": {
+     "sale": 2126,
+     "presale": 439,
+     "rent": 3096,
+     "land": 190,
+     "park": 114
+    }
+   }
+  },
+  "F": {
+   "name": "新北市",
+   "sale": 50441,
+   "presale": 19001,
+   "rent": 73699,
+   "land": 7161,
+   "park": 2254,
+   "from": 20240501,
+   "to": 20261008,
+   "districts": {
+    "三峽區": {
+     "sale": 1086,
+     "presale": 166,
+     "rent": 2547,
+     "land": 345,
+     "park": 49
+    },
+    "三芝區": {
+     "sale": 475,
+     "presale": 18,
+     "rent": 745,
+     "land": 169,
+     "park": 58
+    },
+    "三重區": {
+     "sale": 4838,
+     "presale": 3377,
+     "rent": 7652,
+     "land": 399,
+     "park": 162
+    },
+    "中和區": {
+     "sale": 4624,
+     "presale": 1964,
+     "rent": 7838,
+     "land": 416,
+     "park": 225
+    },
+    "五股區": {
+     "sale": 1562,
+     "presale": 403,
+     "rent": 3257,
+     "land": 205,
+     "park": 34
+    },
+    "八里區": {
+     "sale": 699,
+     "presale": 157,
+     "rent": 1103,
+     "land": 192,
+     "park": 15
+    },
+    "土城區": {
+     "sale": 2708,
+     "presale": 1031,
+     "rent": 3665,
+     "land": 286,
+     "park": 125
+    },
+    "坪林區": {
+     "sale": 1,
+     "presale": 0,
+     "rent": 0,
+     "land": 45,
+     "park": 0
+    },
+    "平溪區": {
+     "sale": 0,
+     "presale": 0,
+     "rent": 0,
+     "land": 70,
+     "park": 0
+    },
+    "新店區": {
+     "sale": 3893,
+     "presale": 1201,
+     "rent": 4382,
+     "land": 553,
+     "park": 169
+    },
+    "新莊區": {
+     "sale": 4988,
+     "presale": 1888,
+     "rent": 6076,
+     "land": 551,
+     "park": 257
+    },
+    "板橋區": {
+     "sale": 5559,
+     "presale": 2247,
+     "rent": 8297,
+     "land": 352,
+     "park": 269
+    },
+    "林口區": {
+     "sale": 2557,
+     "presale": 2285,
+     "rent": 1875,
+     "land": 453,
+     "park": 71
+    },
+    "樹林區": {
+     "sale": 1397,
+     "presale": 161,
+     "rent": 1916,
+     "land": 351,
+     "park": 80
+    },
+    "永和區": {
+     "sale": 1933,
+     "presale": 709,
+     "rent": 3431,
+     "land": 261,
+     "park": 125
+    },
+    "汐止區": {
+     "sale": 3319,
+     "presale": 306,
+     "rent": 4346,
+     "land": 328,
+     "park": 259
+    },
+    "泰山區": {
+     "sale": 920,
+     "presale": 748,
+     "rent": 1579,
+     "land": 132,
+     "park": 27
+    },
+    "淡水區": {
+     "sale": 6295,
+     "presale": 1551,
+     "rent": 10049,
+     "land": 693,
+     "park": 197
+    },
+    "深坑區": {
+     "sale": 274,
+     "presale": 28,
+     "rent": 146,
+     "land": 47,
+     "park": 5
+    },
+    "烏來區": {
+     "sale": 4,
+     "presale": 0,
+     "rent": 3,
+     "land": 9,
+     "park": 0
+    },
+    "瑞芳區": {
+     "sale": 236,
+     "presale": 0,
+     "rent": 173,
+     "land": 309,
+     "park": 0
+    },
+    "石碇區": {
+     "sale": 4,
+     "presale": 0,
+     "rent": 4,
+     "land": 55,
+     "park": 0
+    },
+    "石門區": {
+     "sale": 28,
+     "presale": 0,
+     "rent": 4,
+     "land": 52,
+     "park": 0
+    },
+    "萬里區": {
+     "sale": 302,
+     "presale": 0,
+     "rent": 161,
+     "land": 83,
+     "park": 4
+    },
+    "蘆洲區": {
+     "sale": 1637,
+     "presale": 141,
+     "rent": 2650,
+     "land": 174,
+     "park": 107
+    },
+    "貢寮區": {
+     "sale": 28,
+     "presale": 0,
+     "rent": 2,
+     "land": 174,
+     "park": 0
+    },
+    "金山區": {
+     "sale": 184,
+     "presale": 32,
+     "rent": 88,
+     "land": 142,
+     "park": 6
+    },
+    "雙溪區": {
+     "sale": 12,
+     "presale": 0,
+     "rent": 2,
+     "land": 84,
+     "park": 0
+    },
+    "鶯歌區": {
+     "sale": 878,
+     "presale": 588,
+     "rent": 1708,
+     "land": 231,
+     "park": 10
+    }
+   }
+  },
+  "G": {
+   "name": "宜蘭縣",
+   "sale": 6567,
+   "presale": 2668,
+   "rent": 3592,
+   "land": 3606,
+   "park": 42,
+   "from": 20240501,
+   "to": 20261002,
+   "districts": {
+    "三星鄉": {
+     "sale": 397,
+     "presale": 210,
+     "rent": 34,
+     "land": 354,
+     "park": 0
+    },
+    "五結鄉": {
+     "sale": 803,
+     "presale": 414,
+     "rent": 359,
+     "land": 407,
+     "park": 3
+    },
+    "冬山鄉": {
+     "sale": 730,
+     "presale": 358,
+     "rent": 177,
+     "land": 495,
+     "park": 2
+    },
+    "南澳鄉": {
+     "sale": 2,
+     "presale": 0,
+     "rent": 0,
+     "land": 82,
+     "park": 0
+    },
+    "員山鄉": {
+     "sale": 353,
+     "presale": 257,
+     "rent": 107,
+     "land": 359,
+     "park": 0
+    },
+    "壯圍鄉": {
+     "sale": 335,
+     "presale": 220,
+     "rent": 52,
+     "land": 388,
+     "park": 1
+    },
+    "大同鄉": {
+     "sale": 5,
+     "presale": 0,
+     "rent": 0,
+     "land": 43,
+     "park": 0
+    },
+    "宜蘭市": {
+     "sale": 1277,
+     "presale": 444,
+     "rent": 1149,
+     "land": 425,
+     "park": 8
+    },
+    "礁溪鄉": {
+     "sale": 1108,
+     "presale": 175,
+     "rent": 534,
+     "land": 421,
+     "park": 14
+    },
+    "羅東鎮": {
+     "sale": 865,
+     "presale": 208,
+     "rent": 875,
+     "land": 230,
+     "park": 11
+    },
+    "蘇澳鎮": {
+     "sale": 385,
+     "presale": 204,
+     "rent": 176,
+     "land": 189,
+     "park": 0
+    },
+    "頭城鎮": {
+     "sale": 307,
+     "presale": 178,
+     "rent": 129,
+     "land": 213,
+     "park": 3
+    }
+   }
+  },
+  "H": {
+   "name": "桃園市",
+   "sale": 39676,
+   "presale": 17877,
+   "rent": 79205,
+   "land": 12722,
+   "park": 787,
+   "from": 20240501,
+   "to": 20261009,
+   "districts": {
+    "中壢區": {
+     "sale": 7826,
+     "presale": 3420,
+     "rent": 18107,
+     "land": 1979,
+     "park": 180
+    },
+    "八德區": {
+     "sale": 3371,
+     "presale": 1052,
+     "rent": 7248,
+     "land": 621,
+     "park": 30
+    },
+    "大園區": {
+     "sale": 3607,
+     "presale": 3158,
+     "rent": 2851,
+     "land": 1044,
+     "park": 16
+    },
+    "大溪區": {
+     "sale": 888,
+     "presale": 208,
+     "rent": 1924,
+     "land": 820,
+     "park": 10
+    },
+    "平鎮區": {
+     "sale": 2641,
+     "presale": 796,
+     "rent": 6008,
+     "land": 1179,
+     "park": 22
+    },
+    "復興區": {
+     "sale": 12,
+     "presale": 0,
+     "rent": 0,
+     "land": 129,
+     "park": 0
+    },
+    "新屋區": {
+     "sale": 971,
+     "presale": 371,
+     "rent": 315,
+     "land": 799,
+     "park": 2
+    },
+    "桃園區": {
+     "sale": 7163,
+     "presale": 3128,
+     "rent": 18013,
+     "land": 948,
+     "park": 275
+    },
+    "楊梅區": {
+     "sale": 2971,
+     "presale": 1470,
+     "rent": 5686,
+     "land": 1003,
+     "park": 40
+    },
+    "蘆竹區": {
+     "sale": 2666,
+     "presale": 1177,
+     "rent": 4751,
+     "land": 1618,
+     "park": 85
+    },
+    "觀音區": {
+     "sale": 2294,
+     "presale": 1124,
+     "rent": 4586,
+     "land": 998,
+     "park": 10
+    },
+    "龍潭區": {
+     "sale": 1737,
+     "presale": 430,
+     "rent": 3083,
+     "land": 819,
+     "park": 52
+    },
+    "龜山區": {
+     "sale": 3529,
+     "presale": 1543,
+     "rent": 6633,
+     "land": 765,
+     "park": 65
+    }
+   }
+  },
+  "I": {
+   "name": "嘉義市",
+   "sale": 2993,
+   "presale": 1067,
+   "rent": 3154,
+   "land": 1024,
+   "park": 40,
+   "from": 20240503,
+   "to": 20261003,
+   "districts": {
+    "嘉義市": {
+     "sale": 2993,
+     "presale": 1067,
+     "rent": 3154,
+     "land": 1024,
+     "park": 40
+    }
+   }
+  },
+  "J": {
+   "name": "新竹縣",
+   "sale": 7914,
+   "presale": 3056,
+   "rent": 2880,
+   "land": 5450,
+   "park": 184,
+   "from": 20240501,
+   "to": 20261006,
+   "districts": {
+    "五峰鄉": {
+     "sale": 2,
+     "presale": 0,
+     "rent": 0,
+     "land": 68,
+     "park": 0
+    },
+    "北埔鄉": {
+     "sale": 55,
+     "presale": 28,
+     "rent": 3,
+     "land": 112,
+     "park": 0
+    },
+    "寶山鄉": {
+     "sale": 132,
+     "presale": 511,
+     "rent": 32,
+     "land": 504,
+     "park": 0
+    },
+    "尖石鄉": {
+     "sale": 0,
+     "presale": 0,
+     "rent": 0,
+     "land": 105,
+     "park": 0
+    },
+    "峨眉鄉": {
+     "sale": 19,
+     "presale": 0,
+     "rent": 1,
+     "land": 104,
+     "park": 0
+    },
+    "新埔鎮": {
+     "sale": 321,
+     "presale": 110,
+     "rent": 44,
+     "land": 574,
+     "park": 1
+    },
+    "新豐鄉": {
+     "sale": 1103,
+     "presale": 264,
+     "rent": 342,
+     "land": 629,
+     "park": 0
+    },
+    "橫山鄉": {
+     "sale": 36,
+     "presale": 14,
+     "rent": 0,
+     "land": 220,
+     "park": 1
+    },
+    "湖口鄉": {
+     "sale": 1538,
+     "presale": 694,
+     "rent": 541,
+     "land": 798,
+     "park": 4
+    },
+    "竹北市": {
+     "sale": 3252,
+     "presale": 950,
+     "rent": 1530,
+     "land": 809,
+     "park": 153
+    },
+    "竹東鎮": {
+     "sale": 1075,
+     "presale": 320,
+     "rent": 285,
+     "land": 845,
+     "park": 25
+    },
+    "芎林鄉": {
+     "sale": 215,
+     "presale": 105,
+     "rent": 33,
+     "land": 255,
+     "park": 0
+    },
+    "關西鎮": {
+     "sale": 166,
+     "presale": 60,
+     "rent": 69,
+     "land": 427,
+     "park": 0
+    }
+   }
+  },
+  "K": {
+   "name": "苗栗縣",
+   "sale": 5403,
+   "presale": 2903,
+   "rent": 2152,
+   "land": 5429,
+   "park": 60,
+   "from": 20240501,
+   "to": 20261008,
+   "districts": {
+    "三灣鄉": {
+     "sale": 21,
+     "presale": 0,
+     "rent": 0,
+     "land": 169,
+     "park": 0
+    },
+    "三義鄉": {
+     "sale": 75,
+     "presale": 51,
+     "rent": 3,
+     "land": 147,
+     "park": 0
+    },
+    "公館鄉": {
+     "sale": 227,
+     "presale": 119,
+     "rent": 15,
+     "land": 299,
+     "park": 0
+    },
+    "卓蘭鎮": {
+     "sale": 36,
+     "presale": 2,
+     "rent": 0,
+     "land": 155,
+     "park": 0
+    },
+    "南庄鄉": {
+     "sale": 18,
+     "presale": 0,
+     "rent": 0,
+     "land": 167,
+     "park": 0
+    },
+    "大湖鄉": {
+     "sale": 43,
+     "presale": 1,
+     "rent": 5,
+     "land": 193,
+     "park": 0
+    },
+    "後龍鎮": {
+     "sale": 314,
+     "presale": 459,
+     "rent": 54,
+     "land": 784,
+     "park": 0
+    },
+    "泰安鄉": {
+     "sale": 3,
+     "presale": 0,
+     "rent": 0,
+     "land": 116,
+     "park": 0
+    },
+    "獅潭鄉": {
+     "sale": 10,
+     "presale": 0,
+     "rent": 0,
+     "land": 106,
+     "park": 0
+    },
+    "竹南鎮": {
+     "sale": 1317,
+     "presale": 1043,
+     "rent": 796,
+     "land": 591,
+     "park": 16
+    },
+    "苑裡鎮": {
+     "sale": 357,
+     "presale": 222,
+     "rent": 26,
+     "land": 459,
+     "park": 1
+    },
+    "苗栗市": {
+     "sale": 1088,
+     "presale": 284,
+     "rent": 415,
+     "land": 321,
+     "park": 4
+    },
+    "西湖鄉": {
+     "sale": 5,
+     "presale": 0,
+     "rent": 0,
+     "land": 92,
+     "park": 0
+    },
+    "通霄鎮": {
+     "sale": 111,
+     "presale": 8,
+     "rent": 4,
+     "land": 386,
+     "park": 11
+    },
+    "造橋鄉": {
+     "sale": 179,
+     "presale": 2,
+     "rent": 124,
+     "land": 232,
+     "park": 0
+    },
+    "銅鑼鄉": {
+     "sale": 103,
+     "presale": 65,
+     "rent": 36,
+     "land": 156,
+     "park": 0
+    },
+    "頭份市": {
+     "sale": 1448,
+     "presale": 643,
+     "rent": 670,
+     "land": 712,
+     "park": 28
+    },
+    "頭屋鄉": {
+     "sale": 48,
+     "presale": 4,
+     "rent": 4,
+     "land": 344,
+     "park": 0
+    }
+   }
+  },
+  "M": {
+   "name": "南投縣",
+   "sale": 3289,
+   "presale": 773,
+   "rent": 1632,
+   "land": 4011,
+   "park": 9,
+   "from": 20240501,
+   "to": 20261012,
+   "districts": {
+    "中寮鄉": {
+     "sale": 57,
+     "presale": 0,
+     "rent": 1,
+     "land": 213,
+     "park": 0
+    },
+    "仁愛鄉": {
+     "sale": 9,
+     "presale": 0,
+     "rent": 0,
+     "land": 173,
+     "park": 0
+    },
+    "信義鄉": {
+     "sale": 3,
+     "presale": 0,
+     "rent": 0,
+     "land": 44,
+     "park": 0
+    },
+    "南投市": {
+     "sale": 898,
+     "presale": 176,
+     "rent": 296,
+     "land": 649,
+     "park": 7
+    },
+    "名間鄉": {
+     "sale": 114,
+     "presale": 3,
+     "rent": 29,
+     "land": 331,
+     "park": 0
+    },
+    "國姓鄉": {
+     "sale": 55,
+     "presale": 0,
+     "rent": 3,
+     "land": 169,
+     "park": 0
+    },
+    "埔里鎮": {
+     "sale": 644,
+     "presale": 196,
+     "rent": 188,
+     "land": 658,
+     "park": 2
+    },
+    "水里鄉": {
+     "sale": 59,
+     "presale": 0,
+     "rent": 4,
+     "land": 157,
+     "park": 0
+    },
+    "竹山鎮": {
+     "sale": 402,
+     "presale": 72,
+     "rent": 54,
+     "land": 512,
+     "park": 0
+    },
+    "草屯鎮": {
+     "sale": 860,
+     "presale": 294,
+     "rent": 1014,
+     "land": 618,
+     "park": 0
+    },
+    "集集鎮": {
+     "sale": 59,
+     "presale": 3,
+     "rent": 12,
+     "land": 113,
+     "park": 0
+    },
+    "魚池鄉": {
+     "sale": 55,
+     "presale": 5,
+     "rent": 24,
+     "land": 170,
+     "park": 0
+    },
+    "鹿谷鄉": {
+     "sale": 74,
+     "presale": 24,
+     "rent": 7,
+     "land": 204,
+     "park": 0
+    }
+   }
+  },
+  "N": {
+   "name": "彰化縣",
+   "sale": 7656,
+   "presale": 2418,
+   "rent": 3201,
+   "land": 7297,
+   "park": 24,
+   "from": 20240501,
+   "to": 20261008,
+   "districts": {
+    "二林鎮": {
+     "sale": 431,
+     "presale": 73,
+     "rent": 106,
+     "land": 395,
+     "park": 0
+    },
+    "二水鄉": {
+     "sale": 52,
+     "presale": 0,
+     "rent": 0,
+     "land": 79,
+     "park": 0
+    },
+    "伸港鄉": {
+     "sale": 274,
+     "presale": 111,
+     "rent": 23,
+     "land": 166,
+     "park": 0
+    },
+    "北斗鎮": {
+     "sale": 337,
+     "presale": 63,
+     "rent": 39,
+     "land": 213,
+     "park": 0
+    },
+    "和美鎮": {
+     "sale": 464,
+     "presale": 146,
+     "rent": 124,
+     "land": 490,
+     "park": 7
+    },
+    "員林市": {
+     "sale": 1063,
+     "presale": 307,
+     "rent": 877,
+     "land": 451,
+     "park": 6
+    },
+    "埔心鄉": {
+     "sale": 250,
+     "presale": 142,
+     "rent": 39,
+     "land": 305,
+     "park": 0
+    },
+    "埔鹽鄉": {
+     "sale": 151,
+     "presale": 37,
+     "rent": 10,
+     "land": 251,
+     "park": 0
+    },
+    "埤頭鄉": {
+     "sale": 145,
+     "presale": 29,
+     "rent": 13,
+     "land": 230,
+     "park": 0
+    },
+    "大城鄉": {
+     "sale": 18,
+     "presale": 0,
+     "rent": 0,
+     "land": 259,
+     "park": 0
+    },
+    "大村鄉": {
+     "sale": 207,
+     "presale": 98,
+     "rent": 218,
+     "land": 216,
+     "park": 0
+    },
+    "彰化市": {
+     "sale": 1590,
+     "presale": 442,
+     "rent": 1363,
+     "land": 710,
+     "park": 11
+    },
+    "永靖鄉": {
+     "sale": 168,
+     "presale": 87,
+     "rent": 11,
+     "land": 242,
+     "park": 0
+    },
+    "溪州鄉": {
+     "sale": 147,
+     "presale": 39,
+     "rent": 15,
+     "land": 320,
+     "park": 0
+    },
+    "溪湖鎮": {
+     "sale": 315,
+     "presale": 163,
+     "rent": 86,
+     "land": 297,
+     "park": 0
+    },
+    "田中鎮": {
+     "sale": 308,
+     "presale": 54,
+     "rent": 34,
+     "land": 252,
+     "park": 0
+    },
+    "田尾鄉": {
+     "sale": 96,
+     "presale": 27,
+     "rent": 10,
+     "land": 200,
+     "park": 0
+    },
+    "社頭鄉": {
+     "sale": 229,
+     "presale": 110,
+     "rent": 21,
+     "land": 238,
+     "park": 0
+    },
+    "福興鄉": {
+     "sale": 174,
+     "presale": 61,
+     "rent": 30,
+     "land": 254,
+     "park": 0
+    },
+    "秀水鄉": {
+     "sale": 213,
+     "presale": 72,
+     "rent": 18,
+     "land": 235,
+     "park": 0
+    },
+    "竹塘鄉": {
+     "sale": 65,
+     "presale": 20,
+     "rent": 8,
+     "land": 154,
+     "park": 0
+    },
+    "線西鄉": {
+     "sale": 103,
+     "presale": 44,
+     "rent": 14,
+     "land": 80,
+     "park": 0
+    },
+    "芬園鄉": {
+     "sale": 82,
+     "presale": 26,
+     "rent": 8,
+     "land": 226,
+     "park": 0
+    },
+    "花壇鄉": {
+     "sale": 275,
+     "presale": 176,
+     "rent": 37,
+     "land": 270,
+     "park": 0
+    },
+    "芳苑鄉": {
+     "sale": 133,
+     "presale": 13,
+     "rent": 14,
+     "land": 406,
+     "park": 0
+    },
+    "鹿港鎮": {
+     "sale": 366,
+     "presale": 78,
+     "rent": 83,
+     "land": 358,
+     "park": 0
+    }
+   }
+  },
+  "O": {
+   "name": "新竹市",
+   "sale": 5124,
+   "presale": 1440,
+   "rent": 3015,
+   "land": 1782,
+   "park": 112,
+   "from": 20240501,
+   "to": 20261010,
+   "districts": {
+    "新竹市": {
+     "sale": 5124,
+     "presale": 1440,
+     "rent": 3015,
+     "land": 1782,
+     "park": 112
+    }
+   }
+  },
+  "P": {
+   "name": "雲林縣",
+   "sale": 4563,
+   "presale": 1521,
+   "rent": 1359,
+   "land": 6442,
+   "park": 17,
+   "from": 20240501,
+   "to": 20261012,
+   "districts": {
+    "二崙鄉": {
+     "sale": 82,
+     "presale": 0,
+     "rent": 1,
+     "land": 291,
+     "park": 0
+    },
+    "元長鄉": {
+     "sale": 64,
+     "presale": 23,
+     "rent": 28,
+     "land": 330,
+     "park": 0
+    },
+    "北港鎮": {
+     "sale": 241,
+     "presale": 57,
+     "rent": 84,
+     "land": 284,
+     "park": 5
+    },
+    "口湖鄉": {
+     "sale": 24,
+     "presale": 0,
+     "rent": 3,
+     "land": 222,
+     "park": 0
+    },
+    "古坑鄉": {
+     "sale": 154,
+     "presale": 21,
+     "rent": 9,
+     "land": 685,
+     "park": 0
+    },
+    "台西鄉": {
+     "sale": 19,
+     "presale": 0,
+     "rent": 1,
+     "land": 255,
+     "park": 0
+    },
+    "四湖鄉": {
+     "sale": 27,
+     "presale": 0,
+     "rent": 2,
+     "land": 310,
+     "park": 0
+    },
+    "土庫鎮": {
+     "sale": 201,
+     "presale": 72,
+     "rent": 5,
+     "land": 276,
+     "park": 0
+    },
+    "大埤鄉": {
+     "sale": 55,
+     "presale": 3,
+     "rent": 13,
+     "land": 225,
+     "park": 0
+    },
+    "崙背鄉": {
+     "sale": 133,
+     "presale": 32,
+     "rent": 3,
+     "land": 206,
+     "park": 0
+    },
+    "斗六市": {
+     "sale": 1453,
+     "presale": 518,
+     "rent": 677,
+     "land": 748,
+     "park": 7
+    },
+    "斗南鎮": {
+     "sale": 488,
+     "presale": 153,
+     "rent": 210,
+     "land": 433,
+     "park": 4
+    },
+    "東勢鄉": {
+     "sale": 18,
+     "presale": 0,
+     "rent": 2,
+     "land": 250,
+     "park": 0
+    },
+    "林內鄉": {
+     "sale": 49,
+     "presale": 15,
+     "rent": 4,
+     "land": 144,
+     "park": 0
+    },
+    "水林鄉": {
+     "sale": 40,
+     "presale": 4,
+     "rent": 2,
+     "land": 277,
+     "park": 0
+    },
+    "莿桐鄉": {
+     "sale": 146,
+     "presale": 21,
+     "rent": 4,
+     "land": 266,
+     "park": 0
+    },
+    "虎尾鎮": {
+     "sale": 834,
+     "presale": 395,
+     "rent": 284,
+     "land": 566,
+     "park": 1
+    },
+    "褒忠鄉": {
+     "sale": 38,
+     "presale": 6,
+     "rent": 0,
+     "land": 148,
+     "park": 0
+    },
+    "西螺鎮": {
+     "sale": 351,
+     "presale": 164,
+     "rent": 24,
+     "land": 341,
+     "park": 0
+    },
+    "麥寮鄉": {
+     "sale": 146,
+     "presale": 37,
+     "rent": 3,
+     "land": 185,
+     "park": 0
+    }
+   }
+  },
+  "Q": {
+   "name": "嘉義縣",
+   "sale": 2944,
+   "presale": 897,
+   "rent": 1907,
+   "land": 5857,
+   "park": 10,
+   "from": 20240501,
+   "to": 20261007,
+   "districts": {
+    "中埔鄉": {
+     "sale": 312,
+     "presale": 107,
+     "rent": 63,
+     "land": 456,
+     "park": 0
+    },
+    "六腳鄉": {
+     "sale": 64,
+     "presale": 9,
+     "rent": 6,
+     "land": 484,
+     "park": 0
+    },
+    "大埔鄉": {
+     "sale": 3,
+     "presale": 0,
+     "rent": 0,
+     "land": 10,
+     "park": 0
+    },
+    "大林鎮": {
+     "sale": 307,
+     "presale": 93,
+     "rent": 146,
+     "land": 407,
+     "park": 2
+    },
+    "太保市": {
+     "sale": 434,
+     "presale": 186,
+     "rent": 666,
+     "land": 578,
+     "park": 1
+    },
+    "布袋鎮": {
+     "sale": 65,
+     "presale": 0,
+     "rent": 9,
+     "land": 166,
+     "park": 0
+    },
+    "新港鄉": {
+     "sale": 139,
+     "presale": 86,
+     "rent": 30,
+     "land": 358,
+     "park": 0
+    },
+    "朴子市": {
+     "sale": 304,
+     "presale": 72,
+     "rent": 204,
+     "land": 370,
+     "park": 0
+    },
+    "東石鄉": {
+     "sale": 57,
+     "presale": 0,
+     "rent": 3,
+     "land": 177,
+     "park": 0
+    },
+    "梅山鄉": {
+     "sale": 58,
+     "presale": 4,
+     "rent": 23,
+     "land": 204,
+     "park": 0
+    },
+    "民雄鄉": {
+     "sale": 625,
+     "presale": 278,
+     "rent": 641,
+     "land": 582,
+     "park": 3
+    },
+    "水上鄉": {
+     "sale": 343,
+     "presale": 32,
+     "rent": 58,
+     "land": 1000,
+     "park": 0
+    },
+    "溪口鄉": {
+     "sale": 33,
+     "presale": 0,
+     "rent": 3,
+     "land": 158,
+     "park": 0
+    },
+    "番路鄉": {
+     "sale": 56,
+     "presale": 8,
+     "rent": 38,
+     "land": 165,
+     "park": 4
+    },
+    "竹崎鄉": {
+     "sale": 91,
+     "presale": 0,
+     "rent": 16,
+     "land": 226,
+     "park": 0
+    },
+    "義竹鄉": {
+     "sale": 22,
+     "presale": 1,
+     "rent": 0,
+     "land": 213,
+     "park": 0
+    },
+    "阿里山鄉": {
+     "sale": 0,
+     "presale": 0,
+     "rent": 0,
+     "land": 30,
+     "park": 0
+    },
+    "鹿草鄉": {
+     "sale": 31,
+     "presale": 21,
+     "rent": 1,
+     "land": 273,
+     "park": 0
+    }
+   }
+  },
+  "T": {
+   "name": "屏東縣",
+   "sale": 7493,
+   "presale": 966,
+   "rent": 2804,
+   "land": 6981,
+   "park": 27,
+   "from": 20240501,
+   "to": 20261013,
+   "districts": {
+    "三地門鄉": {
+     "sale": 1,
+     "presale": 0,
+     "rent": 0,
+     "land": 108,
+     "park": 0
+    },
+    "九如鄉": {
+     "sale": 217,
+     "presale": 10,
+     "rent": 10,
+     "land": 223,
+     "park": 0
+    },
+    "佳冬鄉": {
+     "sale": 76,
+     "presale": 11,
+     "rent": 1,
+     "land": 157,
+     "park": 0
+    },
+    "來義鄉": {
+     "sale": 0,
+     "presale": 0,
+     "rent": 0,
+     "land": 36,
+     "park": 0
+    },
+    "內埔鄉": {
+     "sale": 793,
+     "presale": 54,
+     "rent": 1306,
+     "land": 764,
+     "park": 2
+    },
+    "南州鄉": {
+     "sale": 62,
+     "presale": 0,
+     "rent": 1,
+     "land": 119,
+     "park": 0
+    },
+    "屏東市": {
+     "sale": 2699,
+     "presale": 310,
+     "rent": 985,
+     "land": 508,
+     "park": 22
+    },
+    "崁頂鄉": {
+     "sale": 51,
+     "presale": 10,
+     "rent": 4,
+     "land": 144,
+     "park": 0
+    },
+    "恆春鎮": {
+     "sale": 332,
+     "presale": 34,
+     "rent": 19,
+     "land": 311,
+     "park": 0
+    },
+    "新園鄉": {
+     "sale": 199,
+     "presale": 54,
+     "rent": 10,
+     "land": 294,
+     "park": 0
+    },
+    "新埤鄉": {
+     "sale": 53,
+     "presale": 1,
+     "rent": 5,
+     "land": 187,
+     "park": 0
+    },
+    "春日鄉": {
+     "sale": 1,
+     "presale": 0,
+     "rent": 0,
+     "land": 88,
+     "park": 0
+    },
+    "東港鎮": {
+     "sale": 530,
+     "presale": 50,
+     "rent": 63,
+     "land": 313,
+     "park": 2
+    },
+    "枋寮鄉": {
+     "sale": 160,
+     "presale": 6,
+     "rent": 15,
+     "land": 303,
+     "park": 0
+    },
+    "枋山鄉": {
+     "sale": 8,
+     "presale": 0,
+     "rent": 4,
+     "land": 61,
+     "park": 0
+    },
+    "林邊鄉": {
+     "sale": 73,
+     "presale": 6,
+     "rent": 4,
+     "land": 91,
+     "park": 0
+    },
+    "泰武鄉": {
+     "sale": 0,
+     "presale": 0,
+     "rent": 0,
+     "land": 38,
+     "park": 0
+    },
+    "滿州鄉": {
+     "sale": 5,
+     "presale": 0,
+     "rent": 0,
+     "land": 99,
+     "park": 0
+    },
+    "潮州鎮": {
+     "sale": 807,
+     "presale": 102,
+     "rent": 200,
+     "land": 313,
+     "park": 1
+    },
+    "牡丹鄉": {
+     "sale": 5,
+     "presale": 0,
+     "rent": 0,
+     "land": 113,
+     "park": 0
+    },
+    "獅子鄉": {
+     "sale": 2,
+     "presale": 0,
+     "rent": 2,
+     "land": 99,
+     "park": 0
+    },
+    "琉球鄉": {
+     "sale": 16,
+     "presale": 0,
+     "rent": 1,
+     "land": 253,
+     "park": 0
+    },
+    "瑪家鄉": {
+     "sale": 0,
+     "presale": 0,
+     "rent": 0,
+     "land": 39,
+     "park": 0
+    },
+    "竹田鄉": {
+     "sale": 87,
+     "presale": 3,
+     "rent": 8,
+     "land": 216,
+     "park": 0
+    },
+    "萬丹鄉": {
+     "sale": 428,
+     "presale": 100,
+     "rent": 62,
+     "land": 390,
+     "park": 0
+    },
+    "萬巒鄉": {
+     "sale": 64,
+     "presale": 2,
+     "rent": 2,
+     "land": 241,
+     "park": 0
+    },
+    "車城鄉": {
+     "sale": 40,
+     "presale": 0,
+     "rent": 0,
+     "land": 57,
+     "park": 0
+    },
+    "里港鄉": {
+     "sale": 204,
+     "presale": 31,
+     "rent": 20,
+     "land": 242,
+     "park": 0
+    },
+    "長治鄉": {
+     "sale": 305,
+     "presale": 148,
+     "rent": 66,
+     "land": 359,
+     "park": 0
+    },
+    "霧臺鄉": {
+     "sale": 0,
+     "presale": 0,
+     "rent": 0,
+     "land": 27,
+     "park": 0
+    },
+    "高樹鄉": {
+     "sale": 61,
+     "presale": 0,
+     "rent": 0,
+     "land": 362,
+     "park": 0
+    },
+    "鹽埔鄉": {
+     "sale": 103,
+     "presale": 0,
+     "rent": 3,
+     "land": 259,
+     "park": 0
+    },
+    "麟洛鄉": {
+     "sale": 111,
+     "presale": 34,
+     "rent": 13,
+     "land": 167,
+     "park": 0
+    }
+   }
+  },
+  "U": {
+   "name": "花蓮縣",
+   "sale": 3228,
+   "presale": 371,
+   "rent": 2369,
+   "land": 2102,
+   "park": 12,
+   "from": 20240501,
+   "to": 20261010,
+   "districts": {
+    "光復鄉": {
+     "sale": 25,
+     "presale": 0,
+     "rent": 7,
+     "land": 148,
+     "park": 0
+    },
+    "卓溪鄉": {
+     "sale": 0,
+     "presale": 0,
+     "rent": 0,
+     "land": 63,
+     "park": 0
+    },
+    "吉安鄉": {
+     "sale": 907,
+     "presale": 79,
+     "rent": 480,
+     "land": 357,
+     "park": 1
+    },
+    "壽豐鄉": {
+     "sale": 144,
+     "presale": 0,
+     "rent": 101,
+     "land": 247,
+     "park": 0
+    },
+    "富里鄉": {
+     "sale": 35,
+     "presale": 0,
+     "rent": 2,
+     "land": 175,
+     "park": 0
+    },
+    "新城鄉": {
+     "sale": 221,
+     "presale": 38,
+     "rent": 99,
+     "land": 111,
+     "park": 0
+    },
+    "玉里鎮": {
+     "sale": 222,
+     "presale": 21,
+     "rent": 16,
+     "land": 284,
+     "park": 1
+    },
+    "瑞穗鄉": {
+     "sale": 48,
+     "presale": 0,
+     "rent": 15,
+     "land": 116,
+     "park": 0
+    },
+    "秀林鄉": {
+     "sale": 13,
+     "presale": 0,
+     "rent": 0,
+     "land": 141,
+     "park": 0
+    },
+    "花蓮市": {
+     "sale": 1572,
+     "presale": 233,
+     "rent": 1646,
+     "land": 197,
+     "park": 10
+    },
+    "萬榮鄉": {
+     "sale": 3,
+     "presale": 0,
+     "rent": 1,
+     "land": 94,
+     "park": 0
+    },
+    "豐濱鄉": {
+     "sale": 9,
+     "presale": 0,
+     "rent": 0,
+     "land": 53,
+     "park": 0
+    },
+    "鳳林鎮": {
+     "sale": 29,
+     "presale": 0,
+     "rent": 2,
+     "land": 116,
+     "park": 0
+    }
+   }
+  },
+  "V": {
+   "name": "臺東縣",
+   "sale": 1580,
+   "presale": 282,
+   "rent": 697,
+   "land": 1668,
+   "park": 16,
+   "from": 20240502,
+   "to": 20261012,
+   "districts": {
+    "卑南鄉": {
+     "sale": 92,
+     "presale": 2,
+     "rent": 24,
+     "land": 160,
+     "park": 0
+    },
+    "台東市": {
+     "sale": 1109,
+     "presale": 270,
+     "rent": 662,
+     "land": 559,
+     "park": 3
+    },
+    "大武鄉": {
+     "sale": 3,
+     "presale": 0,
+     "rent": 1,
+     "land": 59,
+     "park": 0
+    },
+    "太麻里鄉": {
+     "sale": 213,
+     "presale": 0,
+     "rent": 2,
+     "land": 56,
+     "park": 13
+    },
+    "延平鄉": {
+     "sale": 0,
+     "presale": 0,
+     "rent": 0,
+     "land": 33,
+     "park": 0
+    },
+    "成功鎮": {
+     "sale": 54,
+     "presale": 0,
+     "rent": 3,
+     "land": 142,
+     "park": 0
+    },
+    "東河鄉": {
+     "sale": 23,
+     "presale": 0,
+     "rent": 2,
+     "land": 102,
+     "park": 0
+    },
+    "池上鄉": {
+     "sale": 25,
+     "presale": 0,
+     "rent": 2,
+     "land": 74,
+     "park": 0
+    },
+    "海端鄉": {
+     "sale": 1,
+     "presale": 0,
+     "rent": 0,
+     "land": 15,
+     "park": 0
+    },
+    "綠島鄉": {
+     "sale": 1,
+     "presale": 0,
+     "rent": 0,
+     "land": 35,
+     "park": 0
+    },
+    "達仁鄉": {
+     "sale": 0,
+     "presale": 0,
+     "rent": 0,
+     "land": 45,
+     "park": 0
+    },
+    "金峰鄉": {
+     "sale": 0,
+     "presale": 0,
+     "rent": 0,
+     "land": 34,
+     "park": 0
+    },
+    "長濱鄉": {
+     "sale": 14,
+     "presale": 0,
+     "rent": 0,
+     "land": 121,
+     "park": 0
+    },
+    "關山鎮": {
+     "sale": 27,
+     "presale": 10,
+     "rent": 0,
+     "land": 81,
+     "park": 0
+    },
+    "鹿野鄉": {
+     "sale": 18,
+     "presale": 0,
+     "rent": 1,
+     "land": 152,
+     "park": 0
+    }
+   }
+  },
+  "W": {
+   "name": "金門縣",
+   "sale": 826,
+   "presale": 96,
+   "rent": 23,
+   "land": 855,
+   "park": 8,
+   "from": 20240506,
+   "to": 20261005,
+   "districts": {
+    "烈嶼鄉": {
+     "sale": 14,
+     "presale": 0,
+     "rent": 0,
+     "land": 63,
+     "park": 0
+    },
+    "金城鎮": {
+     "sale": 153,
+     "presale": 23,
+     "rent": 11,
+     "land": 149,
+     "park": 1
+    },
+    "金寧鄉": {
+     "sale": 369,
+     "presale": 66,
+     "rent": 9,
+     "land": 272,
+     "park": 0
+    },
+    "金沙鎮": {
+     "sale": 65,
+     "presale": 0,
+     "rent": 2,
+     "land": 250,
+     "park": 0
+    },
+    "金湖鎮": {
+     "sale": 225,
+     "presale": 7,
+     "rent": 1,
+     "land": 121,
+     "park": 7
+    }
+   }
+  },
+  "X": {
+   "name": "澎湖縣",
+   "sale": 472,
+   "presale": 11,
+   "rent": 207,
+   "land": 1354,
+   "park": 1,
+   "from": 20240502,
+   "to": 20261006,
+   "districts": {
+    "七美鄉": {
+     "sale": 2,
+     "presale": 0,
+     "rent": 0,
+     "land": 24,
+     "park": 0
+    },
+    "望安鄉": {
+     "sale": 3,
+     "presale": 0,
+     "rent": 0,
+     "land": 7,
+     "park": 0
+    },
+    "湖西鄉": {
+     "sale": 28,
+     "presale": 0,
+     "rent": 1,
+     "land": 370,
+     "park": 0
+    },
+    "白沙鄉": {
+     "sale": 16,
+     "presale": 0,
+     "rent": 0,
+     "land": 68,
+     "park": 0
+    },
+    "西嶼鄉": {
+     "sale": 11,
+     "presale": 0,
+     "rent": 0,
+     "land": 83,
+     "park": 0
+    },
+    "馬公市": {
+     "sale": 412,
+     "presale": 11,
+     "rent": 206,
+     "land": 802,
+     "park": 1
+    }
+   }
+  },
+  "Z": {
+   "name": "連江縣",
+   "sale": 8,
+   "presale": 0,
+   "rent": 0,
+   "land": 51,
+   "park": 0,
+   "from": 20240904,
+   "to": 20260820,
+   "districts": {
+    "北竿鄉": {
+     "sale": 5,
+     "presale": 0,
+     "rent": 0,
+     "land": 14,
+     "park": 0
+    },
+    "南竿鄉": {
+     "sale": 3,
+     "presale": 0,
+     "rent": 0,
+     "land": 27,
+     "park": 0
+    },
+    "東引鄉": {
+     "sale": 0,
+     "presale": 0,
+     "rent": 0,
+     "land": 3,
+     "park": 0
+    },
+    "莒光鄉": {
+     "sale": 0,
+     "presale": 0,
+     "rent": 0,
+     "land": 7,
+     "park": 0
+    }
+   }
+  }
+ }
+}
